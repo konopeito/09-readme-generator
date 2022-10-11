@@ -52,11 +52,14 @@ function generateMarkdown(answer) {
   return`
   # ${answer.title}
   # ${answer.description}
+  ## Features
   # ${answer.features}
   ## Table of Contents
   ## Installation:
-  ### You must install the following for this app to function:
+  ### You must do the following for this app to function:
   ### ${answer.installation}
+  ## Mockup/Application Preview
+  # ![alt text](${answer.preview})
   ## Usage:
   ### ${answer.usage}
   ## Credits:
@@ -65,9 +68,9 @@ function generateMarkdown(answer) {
   ### ${renderLicenseLink(answer.license)}
   ## Contact:
   ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/${answer.contact}
+  ### Github: https://github.com/${answer.github}
   ### or
-  ### Email: ${answer.contact}
+  ### Email: ${answer.email}
 `;
 }
 

@@ -7,7 +7,7 @@ const questions = [
     {
         // Title
         type: 'input',
-        name: 'project title',
+        name: 'title',
         message: 'Please input project name',
         validate: titleInput => {
             if (titleInput) {
@@ -22,7 +22,7 @@ const questions = [
     {
         // project description
         type: 'input',
-        name: 'project description',
+        name: 'description',
         message:
         'Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide What was your motivation? Why did you build this project? What problem does it solve? What did you learn?',
         validate: descriptionInput => {
@@ -56,19 +56,19 @@ const questions = [
         name: 'table of contents (optional)',
         message:
         'If your README is long, add a table of contents to make it easy for users to find what they need.',
-        validate: descriptionInput => {
+        validate: tableInput => {
             if (tableInput) {
                 return true;
             } else {
-                console.log('this is optional')
-           return true;
+                console.log('This category is optional, to continue hit space.')
+           return false
             }
             }
         },
         {
             // Installation
             type: 'input',
-            name: 'Installation',
+            name: 'installation',
             message:
             'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
             validate: installInput => {
@@ -81,9 +81,24 @@ const questions = [
                 }
             },
             {
+                // Mockup/Preview
+                type: 'input',
+                name: 'preview',
+                message:
+                'Provide an image file URL for preview',
+                validate: previewInput => {
+                    if (previewInput) {
+                        return true;
+                    } else {
+                        console.log('Hit space followed by enter to skip this field')
+                   return false;
+                    }
+                    }
+                },
+            {
                 // Usage
                 type: 'input',
-                name: 'Usage',
+                name: 'usage',
                 message:
                 'Provide instructions and examples for use. Include screenshots as needed, enter file name for image.',
                 validate: usageInput => {
@@ -113,9 +128,9 @@ const questions = [
                     {
                         // License
                         type: 'input',
-                        name: 'License',
+                        name: 'license',
                         message:
-                        'List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.',
+                        'Choose a license, MIT, Apache 2.0, GPL v3.0 or enter NONE',
                         choices: ['MIT', 'Apache 2.0', 'GPL v3.0', 'NONE'],
                         validate: licenseInput => {
                             if (licenseInput) {
@@ -127,14 +142,13 @@ const questions = [
                             }
                         },
                         {
-                            // Contact
+                            // Contact Github
                             type: 'input',
-                            name: 'contact',
+                            name: 'github',
                             message:
-                            'list/link ways users can contact you for questions or concerns',
-                            choices: ['Email','Github','Other/None'],
-                            validate: licenseInput => {
-                                if (licenseInput) {
+                            'Insert Github Username here for users to contact you',
+                            validate: githubInput => {
+                                if (githubInput) {
                                     return true;
                                 } else {
                                     console.log('Please provide information in this field')
@@ -142,6 +156,21 @@ const questions = [
                                 }
                                 }
                             },
+                            {
+                                // Contact Email
+                                type: 'input',
+                                name: 'email',
+                                message:
+                                'Insert Email here for users to contact you',
+                                validate: emailInput => {
+                                    if (emailInput) {
+                                        return true;
+                                    } else {
+                                        console.log('Please provide information in this field')
+                                   return false;
+                                    }
+                                    }
+                                },
                         
 ];
 
