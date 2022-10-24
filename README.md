@@ -9,7 +9,8 @@
   ## Installation:
   ### You must do the following for this app to function:
   ### npm i
-  
+  ## MOCKUP
+  https://github.com/JFritsch04/09-readme-generator/blob/main/video.webm
   ## Usage:
   ### This application usage is for creating a functional and well formatted README.md file 
   ## Credits:
