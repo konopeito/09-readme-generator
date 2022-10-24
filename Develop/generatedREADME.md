@@ -1,16 +1,16 @@
 
-  # README GENERATOR TEST 09
-  # This application uses questions and prompts to obtain user information in order to form a well-formatted README.md file
+  # 09 README Generator (Test)
+  #  Creates functional readme.md file
   ## Features
-  # Creates README files simply 
+  # generates readme.file with prompted questions
   ## Table of Contents
   ## Installation:
   ### You must do the following for this app to function:
   ### npm i
   ## Mockup/Application Preview
-  # ![alt text]( )
+  # ![alt text](skip (test))
   ## Usage:
-  ### *insert example here*
+  ### Used to create readme file (insert image here)
   ## Credits:
   ### none
   ## License: MIT  ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
